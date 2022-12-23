@@ -59,11 +59,11 @@ class FractionPaginationBuilder extends SwiperPlugin {
         children: <Widget>[
           Text(
             '${config.activeIndex + 1}',
-            style: TextStyle(color: activeColor, fontSize: activeFontSize),
+            style: TextStyle(color: activeColor, fontSize: activeFontSize, fontWeight: FontWeight.w600),
           ),
           Text(
             ' / ${config.itemCount}',
-            style: TextStyle(color: color, fontSize: fontSize),
+            style: TextStyle(color: color, fontSize: fontSize, fontWeight: FontWeight.w600),
           )
         ],
       );
