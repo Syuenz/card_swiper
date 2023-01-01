@@ -23,7 +23,7 @@ class SwiperControl extends SwiperPlugin {
   final Key? key;
 
   const SwiperControl({
-    this.iconPrevious = Icons.arrow_back_ios_new,
+    this.iconPrevious = Icons.arrow_back_ios,
     this.iconNext = Icons.arrow_forward_ios,
     this.color,
     this.disableColor,
@@ -43,9 +43,12 @@ class SwiperControl extends SwiperPlugin {
       behavior: HitTestBehavior.opaque,
       onTap: () {
         if (previous) {
-          config!.controller.previous(animation: true);
+          if (config.activeIndex < 0) {
+            config!.controller.previous(animation: true);
+          }
         } else {
-          config!.controller.next(animation: true);
+          if (config.activeIndex > config.itemCount - 1)
+            config!.controller.next(animation: true);
         }
       },
       child: Padding(
