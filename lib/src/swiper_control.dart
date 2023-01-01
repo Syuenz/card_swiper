@@ -23,7 +23,7 @@ class SwiperControl extends SwiperPlugin {
   final Key? key;
 
   const SwiperControl({
-    this.iconPrevious = Icons.arrow_back_ios,
+    this.iconPrevious = Icons.arrow_back_ios_new,
     this.iconNext = Icons.arrow_forward_ios,
     this.color,
     this.disableColor,
