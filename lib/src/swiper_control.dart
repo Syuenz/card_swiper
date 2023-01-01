@@ -43,11 +43,11 @@ class SwiperControl extends SwiperPlugin {
       behavior: HitTestBehavior.opaque,
       onTap: () {
         if (previous) {
-          if (config!.activeIndex < 0) {
+          if (config!.activeIndex > 0) {
             config!.controller.previous(animation: true);
           }
         } else {
-          if (config!.activeIndex > config!.itemCount - 1)
+          if (config!.activeIndex < config!.itemCount - 1)
             config!.controller.next(animation: true);
         }
       },
